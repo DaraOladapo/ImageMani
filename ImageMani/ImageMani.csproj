@@ -95,5 +95,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ImageMani.Library\ImageMani.Library.csproj">
+      <Project>{73247fbd-4eec-47d8-aa1a-54427fd9e852}</Project>
+      <Name>ImageMani.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
