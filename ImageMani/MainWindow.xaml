@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="LoadedImage"/>
+            <Button Content="Open Image and Convert" Grid.Row="1" Click="OnOpenAndConvertToText"/>
+        </Grid>
+        <Grid  Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer>
+                <TextBlock TextWrapping="WrapWithOverflow" x:Name="ImageToBase64Label"/>
+            </ScrollViewer>
+            <Button Content="Convert to Image" Grid.Row="1" Click="OnConvertTextToImage"/>
+        </Grid>
+        <Image Grid.Column="2" x:Name="ConvertedImage"/>
     </Grid>
 </Window>
