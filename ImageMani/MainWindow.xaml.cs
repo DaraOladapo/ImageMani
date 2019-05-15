@@ -21,7 +21,7 @@ namespace ImageMani
         private void OnOpenAndConvertToText(object sender, RoutedEventArgs e)
         {
             ofd.FileOk += Ofd_FileOk;
-            ofd.Filter = "JPG files (*.jpg)|*.jpg|PNG files (*.jpg)|*.png|JPEG files (*.jpg)|*.jpeg";
+            ofd.Filter = "JPG files (*.jpg)|*.jpg|PNG files (*.png)|*.png|JPEG files (*.jpeg)|*.jpeg";
             ofd.Multiselect = false;
             ofd.ShowDialog();
         }
