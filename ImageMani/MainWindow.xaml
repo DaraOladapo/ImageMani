@@ -28,7 +28,14 @@
             <ScrollViewer>
                 <TextBlock TextWrapping="WrapWithOverflow" x:Name="ImageToBase64Label"/>
             </ScrollViewer>
-            <Button Content="Convert to Image" Grid.Row="1" Click="OnConvertTextToImage"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+            <Button Content="Convert Base64String" Grid.Column="0" Click="OnCopy"/>
+            <Button Content="Convert to Image" Grid.Column="1" Click="OnConvertTextToImage"/>
+            </Grid>
         </Grid>
         <Image Grid.Column="2" x:Name="ConvertedImage"/>
     </Grid>

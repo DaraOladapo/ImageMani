@@ -46,5 +46,10 @@ namespace ImageMani
             bitmap.EndInit();
             ConvertedImage.Source = bitmap;
         }
+
+        private void OnCopy(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(ImageToBase64Label.Text);
+        }
     }
 }
